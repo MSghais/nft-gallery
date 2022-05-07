@@ -1,5 +1,5 @@
-query allCollectionSaleEvents($id: ID!, $and: [EventWhereInput!]) {
-  events(where: { nft: {burned_eq: false, collection: { id_eq: $id } }, AND: $and }) {
+query allEventsByProfil($id: String, $and: [EventWhereInput!]) {
+  events(where: {caller_eq : $id, AND: $and }) {
     meta
     interaction
     blockNumber
