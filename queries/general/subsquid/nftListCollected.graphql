@@ -1,5 +1,3 @@
-
-
 query nftListCollected(
   $account: String!
   $first: Int!
